@@ -249,7 +249,7 @@
 
    
 
-    function spawnHearts(count = 4){
+    function spawnHearts(count = 3){
   for(let i = 0; i < count; i++){
     const h = document.createElement("div");
     h.className = "heart";
@@ -264,7 +264,7 @@
 }
 
 function burstHearts(){
-  spawnHearts(6);
+  spawnHearts(4);
 }
 
 // sanfter Dauerfluss
