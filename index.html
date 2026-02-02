@@ -250,26 +250,26 @@
    
 
     // ====== Herzchen-Background ======
-    function spawnHearts(count=10){
-      for(let i=0;i<count;i++){
-        const h = document.createElement("div");
-        h.className = "heart";
-        h.style.setProperty("--x", (Math.random()*100)+"%");
-        h.style.setProperty("--d", (8+Math.random()*10)+"s");
-        h.style.setProperty("--s", (0.6+Math.random()*1.2));
-        h.style.opacity = (0.12+Math.random()*0.22);
-        h.style.background = Math.random() < 0.5 ? "#ff3b6b" : "#ff6fa1";
-        document.body.appendChild(h);
-        // cleanup later
-        setTimeout(() => h.remove(), 23000);
-      }
-    }
-    function burstHearts(){
-      spawnHearts(8);
-    }
-    // gentle continuous hearts
-    spawnHearts(9);
-    setInterval(() => spawnHearts(8), 2200);
+    function spawnHearts(count = 2){
+  for(let i = 0; i < count; i++){
+    const h = document.createElement("div");
+    h.className = "heart";
+    h.style.setProperty("--x", (Math.random() * 100) + "%");
+    h.style.setProperty("--d", (12 + Math.random() * 14) + "s");
+    h.style.setProperty("--s", (0.8 + Math.random() * 0.6));
+    h.style.opacity = (0.08 + Math.random() * 0.12);
+    h.style.background = Math.random() < 0.5 ? "#ff3b6b" : "#ff6fa1";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 26000);
+  }
+}
+
+function burstHearts(){
+  spawnHearts(4);
+}
+
+spawnHearts(3);
+setInterval(() => spawnHearts(2), 4200);
   </script>
 </body>
 </html>
